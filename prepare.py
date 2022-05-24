@@ -44,6 +44,23 @@ def clean_telco(df):
     # of churning yet, I'm dropping these eleven customers from the dataset to make the data cleaner.
 
     df.drop(df[df.total_charges == 0].index, inplace=True)
+    
+    # Since this info is redundant in the dataframe, columns where 'No phone service' or 'No internet service is one of the possible 
+    # values will be changed to 'No
+    for col in df.columns:
+        if df[col].dtype == object:
+            df[col] = df[col].str.replace('No phone service', 'No')
+            df[col] = df[col].str.replace('No internet service', 'No')
+
+    # I need to change several categorical variable values to snake case to make them easier to explore/work with.
+    df['internet_service_type'] = df.internet_service_type.str.replace('Fiber optic', 'fiber_optic')
+    df['payment_type'] = df.payment_type.str.replace('Electronic check', 'electronic_check')
+    df['payment_type'] = df.payment_type.str.replace('Bank transfer (automatic)', 'bank_transfer_automatic', regex = False)
+    df['payment_type'] = df.payment_type.str.replace('Mailed check', 'mailed_check')
+    df['payment_type'] = df.payment_type.str.replace("Credit card (automatic)", 'credit_card_automatic', regex = False)
+    df['contract_type'] = df.contract_type.str.replace('Two year', 'two_year')
+    df['contract_type'] = df.contract_type.str.replace('One year', 'one_year')
+    df['contract_type'] = df.contract_type.str.replace('Month-to-month', 'month_to_month')
 
     # Dropping any duplicates.
     df.drop_duplicates(inplace=True)
@@ -80,3 +97,17 @@ def cat_hists(df):
         sns.histplot(df[col])
         plt.show()
         print(f"Count of variables in {col}: \n{df[col].value_counts()}\n--------------------")
+
+
+def num_hists(df):
+    '''
+    This function takes in the raw telco dataframe and prints histogramse for each of the numerical columns in the telco dataset.
+    This will give me a good sense of how each categorical column is shaped and what the values might be.
+    '''
+    num_cols = ['tenure', 'monthly_charges','total_charges']
+
+    for col in num_cols:
+        sns.histplot(df[col])
+        plt.show()
+        print(f"Count of variables in {col}: \n{df[col].value_counts()}\n--------------------")
+        print(f"Mean of variables in {col}: \n{df[col].mean()}\n--------------------")
