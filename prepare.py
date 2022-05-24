@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 # train test split from sklearn
 from sklearn.model_selection import train_test_split
 
@@ -63,3 +65,18 @@ def encode_telco(df):
     dummy_df = pd.get_dummies(df[dummies_list], drop_first=True)
     encoded = pd.concat([df, dummy_df], axis = 1)
     return encoded
+
+
+def cat_hists(df):
+    ''' This function takes in the raw telco dataframe and prints histograms for each of the categorical columns (minus total_charges
+    which has not been changed yet) in the telco dataset. This will give me a good sense of how each categorical column is shaped. 
+    '''
+
+    cat_cols = df.select_dtypes('object').columns
+    cat_cols = cat_cols.drop('total_charges')
+
+
+    for col in cat_cols:
+        sns.histplot(df[col])
+        plt.show()
+        print(f"Count of variables in {col}: \n{df[col].value_counts()}\n--------------------")
