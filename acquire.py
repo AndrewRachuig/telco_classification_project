@@ -33,3 +33,21 @@ def get_telco_data():
         df.to_csv(filename, index=False)
 
         return df  
+
+# Small function getting me a value_count of all object columns; this gives me a preliminary look at the data.
+def obj_val_cnt(df):
+    ''' This function takes in a raw telco dataframe and prints out value counts for each object column
+    '''
+    for col in df.columns:
+        if df[col].dtype == 'object':
+            print(df[col].value_counts(dropna=False))
+
+
+# This function gives me a dataframe with summary statistics with range added on the end.
+def describe_with_range(df):
+    '''This function takes in a raw telco dataframe and returns a dataframe containingsummary statistics for numerical columns with 
+    range added on the end.
+    '''
+    summary_stats = df.describe().T
+    summary_stats['range'] = summary_stats['max'] - summary_stats['min']
+    return summary_stats
