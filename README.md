@@ -1,4 +1,4 @@
-# <center>Upturn in Churn an Urgent Concern </center>
+# <center>Surge in Churn an Urgent Concern </center>
 
 <img src="img/leaky_customers.jpg" width=600 height=600 />
 
@@ -114,7 +114,7 @@ $H_{a}$ There is a statistically significant difference in total_charges between
 
 - I rejected the Null Hypothesis; There is a statistically significant difference in total_charges between customers who churned and customers who didn't churn.
 
-## Project Plan and Pipeline 
+## Project Plan and Data Science Pipeline
 
 #### Plan
 - Acquire data from the Codeup Database. Create an acquire.py file containing a function to automate the process.
@@ -128,7 +128,57 @@ $H_{a}$ There is a statistically significant difference in total_charges between
 - Evaluate that single model on the test dataset.
 - Create a csv file containing customer_id, probability of churn, and prediction of churn by using my final model on the test dataset.
 - Construct a Final Report Notebook wherein I show how I arrived at the MVP model by using my created modules. Throughout the notebook,document conclusions, takeaways, and next steps.
-- Create README.md with data dictionary, project and business goals, initial hypothesis and an executive summary.
+- Create README.md with data dictionary, project and business goals, initial hypothesis and an executive summary
+
+#### Plan &rarr; Acquire
+- Create acquire.py to store all functions needed to acquire dataset
+- Retrieve data from Codeup Database by running an SQL query to pull requisite Telco data, and put it into a usable Pandas dataframe
+- Do cursory data exploration/summarization to get a general feel for the data contained in the dataset
+- Use the acquire.py file to import and do initial exploration/summarization of the data in the Final Report notebook
+
+#### Plan &rarr; Acquire &rarr; Prepare
+- Explore the data further to see where/how the data is dirty and needs to be cleaned. This is not EDA. This is exploring individuals variables so as to prepare the data to undergo EDA in the next step
+- Create prepare.py to store all functions needed to clean and prepare the dataset
+    - A function which cleans the data:
+        - Convert datatypes where necessary: objects to numerical; numerical to objects
+        - Deal with missing values and nulls
+        - Drop superfluous or redundant data columns
+        - Handle redudant categorical variables that can be simplified
+        - Change names to snake case where needed
+        - Drop duplicates
+    - A function which encodes the cleaned dataframe's categorical variables into numerical variables using one-hot encoding
+    - A function which splits the dataframe into 3 subsets: Train, Validate, and Test to be used for modeling later
+- Use the prepare.py file to import and do initial cleaning/preperation of the data in the Final Report notebook
+
+#### Plan &rarr; Acquire &rarr; Prepare &rarr; Explore
+- Do Exploratory Data Analysis of using bivariate and multivariate stats and visualizations to find interactions in the data
+- Explore my key questions and discover answers to my hypotheses by running statistical analysis on data
+    - Must include at least 4 visualizations and 2 statistical tests
+- Find key features to use in the model. Similarly find unecessary features which can be dropped
+    - Lookfor correlations, relationships, and interactions between various features and the target
+    - Understanding how features relate to one another will be key to understanding if certain features can or should be dropped/combined
+- Document all takeaways and answers to questions/hypotheses
+- Create an explore.py file which will store functions made to aid in the data exploration
+- Use explore.py and stats testing in the final report notebook to show how I came to the conclusions about which data to use
+
+#### Plan &rarr; Acquire &rarr; Prepare &rarr; Explore &rarr; Model
+- Do any final pre-modeling data prep (drop/combine columns) as determined most beneficial from the end of the Explore phase
+- Find and establish baseline accuracy. This will give me an accuracy level to beat with my models
+- Create at least three classification models to predicate target of churn.
+    - Given time attempt other models. I would like to try Support Vector Machines and Naive Bayes
+- For all models made, compare accuracy results from train to validate
+    - If possible iterate through small hyperparameters to see if default values are getting us the best results
+- Compare results from models to determine which is best. Chose the final model to go forward with
+- Vary the algorithm hyperparameters for the final model to find the best performing settings for predicting the target of churn
+    - Create an iteration function to cycle through several thousand possible combinations
+- Put all iteration functions and other created functions into a prepare.py file
+- Use model.py in the final report notebook to show how I reached the final model
+- Having determind the best possible hyperparameters, create the final model and test it on out of sample data (the test subset created in prepare) to determine accuracy
+- Summarize the results using a confusion matrix. Document results and takeaways
+
+#### Plan &rarr; Acquire &rarr; Prepare &rarr; Explore &rarr; Model &rarr; Deliver
+- After introduction, briefly summarize (give an executive summary) the project and goals before delving into the final report notebook for a walkthrough
+- 
 
 
 
