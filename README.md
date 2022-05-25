@@ -14,32 +14,33 @@
     - Model creation and refinement
     - Model Evaluation
     - Conclusions and Next Steps
-- Creation of python modules to assist in the entire process and make it easily repeatable.
+- Creation of python modules to assist in the entire process and make it easily repeatable
     - acquire.py
     - prepare.py
     - explore.py
     - model.py
-- Ask exploratory questions of the data that will give an understanding about the attributes and drivers of customers churning.     
-    - Answer questions through charts and statistical tests.
-- Construct the best possible model for predicting customer churn.
-    - Make predictions for a group of customers.
-- Adequately document and annotate all code.
-- Give a 5 minute presentation to a group of collegues and managers covering the final notebook deliverable with a walkthrough of work I did, why, goals, what you found, your methdologies, and my conclusions.
-- Field questions from instructors and peers about my specific code, approach to the project, findings and model.
+- Ask exploratory questions of the data that will give an understanding about the attributes and drivers of customers churning    
+    - Answer questions through charts and statistical tests
+- Construct the best possible model for predicting customer churn
+    - Make predictions for a group of customers
+- Adequately document and annotate all code
+- Give a 5 minute presentation to a group of collegues and managers covering the final notebook deliverable with a walkthrough of work I did, why, goals, what you found, your methdologies, and my conclusions
+- Field questions from instructors and peers about my specific code, approach to the project, findings and model
 
 ### Business Goals
 - Identify features from the dataset which may be driving churn. **Why are customers churning?**
-- Construct a ML classificationmodel which accurately predicts which customers will churn.
-- Deliver a report that a non-data scientist can read through and understand what steps were taken, why and the resulting outcome.
+- Construct a ML classificationmodel which accurately predicts which customers will churn
+- Deliver a report that a non-data scientist can read through and understand what steps were taken, why and the resulting outcome
 
 ### Audience
-- My target audience for my notebook walkthrough is my direct manager and their manager. 
+- My target audience for my notebook walkthrough is my direct manager and their manager
+- Codeup Data Science instructors and students
 
 ### Project Deliverables
 - A github readme explaining the project
 - A jupyter notebook containing my final report (properly documented and commented)
 - All modules containing functions created to achieve the final report notebook
-- A csv file containing customer_id, probability of churn, and prediction of churn by using my final model on the test dataset.
+- A csv file containing customer_id, probability of churn, and prediction of churn by using my final model on the test dataset
 - 1+ non-final notebook (s) created while working on the project, containing exploration & modeling work (and other work)
 - A presentation of final report notebook
 
