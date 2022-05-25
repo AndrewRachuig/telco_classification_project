@@ -124,7 +124,7 @@ $H_{a}$ There is a statistically significant difference in total_charges between
 - After thoroughly exploring the data, do any final preparation necessary to begin modeling. Automate this function and put it into a model.py file
 - Train at least three different classification models.
 - Evaluate models on train and validate datasets. Do further hyperparamter iteration to find the best performing models. Save all iteration functions to be automated in the model.py file.
-- Choose the model with that performs the best and do final hyperparameter tuning feature selection.
+- Choose the model with that performs the best and do final hyperparameter tuning feature selfection.
 - Evaluate that single model on the test dataset.
 - Create a csv file containing customer_id, probability of churn, and prediction of churn by using my final model on the test dataset.
 - Construct a Final Report Notebook wherein I show how I arrived at the MVP model by using my created modules. Throughout the notebook,document conclusions, takeaways, and next steps.
@@ -155,7 +155,7 @@ $H_{a}$ There is a statistically significant difference in total_charges between
 - Explore my key questions and discover answers to my hypotheses by running statistical analysis on data
     - Must include at least 4 visualizations and 2 statistical tests
 - Find key features to use in the model. Similarly find unecessary features which can be dropped
-    - Lookfor correlations, relationships, and interactions between various features and the target
+    - Look for correlations, relationships, and interactions between various features and the target
     - Understanding how features relate to one another will be key to understanding if certain features can or should be dropped/combined
 - Document all takeaways and answers to questions/hypotheses
 - Create an explore.py file which will store functions made to aid in the data exploration
@@ -178,9 +178,8 @@ $H_{a}$ There is a statistically significant difference in total_charges between
 
 #### Plan &rarr; Acquire &rarr; Prepare &rarr; Explore &rarr; Model &rarr; Deliver
 - After introduction, briefly summarize (give an executive summary) the project and goals before delving into the final report notebook for a walkthrough
-- 
-
-
+- Do not talk through my entire process in the initial pipeline. This is only the "good stuff" to show how I arrived at the model I did
+- Detail my thought process as I was going through the though process to explain the reasons for my choices
 
 ## Executive Summary
 - Of all the classification models I created DecisionTree and RandomForest performed the best.
@@ -195,3 +194,7 @@ $H_{a}$ There is a statistically significant difference in total_charges between
     - Did the customer just not renew a contract? Or did they actively cancel?
     - Was the customer on a promotion that ended right before they churned?
     - For fiber customers who left, were there any major isp problems (outages, slow speed, high latency?) that contributed to them leaving?
+
+## Reproduce this project
+- In order to run through this project yourself you will need your own env.py file that acquire.py will import to be able to access the Codeup database. You must have your own database credentials to access the Codeup database
+- All other requisite files for running the final project notebook (python files, images, csv files) are contained in this repository.
