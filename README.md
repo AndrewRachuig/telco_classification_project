@@ -44,9 +44,6 @@
 - 1+ non-final notebook (s) created while working on the project, containing exploration & modeling work (and other work)
 - A presentation of final report notebook
 
-### Project Context
-- The telco data I'm using came from the Codeup database
-
 ### Data Dictionary
 
 Target|Datatype|Definition|
@@ -197,5 +194,5 @@ $H_{a}$ There is a statistically significant difference in total_charges between
     - For fiber customers who left, were there any major isp problems (outages, slow speed, high latency?) that contributed to them leaving?
 
 ## Reproduce this project
-- In order to run through this project yourself you will need your own env.py file that acquire.py will import to be able to access the Codeup database. You must have your own database credentials to access the Codeup database
+- In order to run through this project yourself you will need your own env.py file that acquire.py will import to be able to access the Codeup database. You must have your own credentials to access the Codeup database
 - All other requisite files for running the final project notebook (python files, images, csv files) are contained in this repository.
