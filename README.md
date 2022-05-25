@@ -1,4 +1,4 @@
-# <center>Surge in Churn an Urgent Concern </center>
+# <center>Surging Churn an Urgent Concern </center>
 
 <img src="img/leaky_customers.jpg" width=600 height=600 />
 
