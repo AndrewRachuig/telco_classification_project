@@ -84,7 +84,7 @@ Target|Datatype|Definition|
 ### Initial hypotheses
 **Question 1:** Is there a difference in tenure between customers who churned and customes who didn't?
 
-**Hypothesis 1:**
+**Hypothesis 1:**<br>
 alpha = .05<br>
 $H_{0}$ There is no difference in tenure between customers who churned and customers who didn't churn.
 
@@ -94,7 +94,7 @@ $H_{a}$ There is a statistically significant difference in tenure between custom
 
 **Question 2:** Is there a difference in monthly_charges between customers who churned and customes who didn't?
 
-**Hypothesis 2:**
+**Hypothesis 2:**<br>
 alpha = .05<br>
 $H_{0}$ There is no difference in monthly_charges between customers who churned and customers who didn't churn.
 
@@ -104,7 +104,7 @@ $H_{a}$ There is a statistically significant difference in monthly_charges betwe
 
 **Question 3:** Is there a difference in total_charges between customers who churned and customes who didn't?
 
-**Hypothesis 3:**
+**Hypothesis 3:**<br>
 alpha = .05<br>
 $H_{0}$ There is no difference in total_charges between customers who churned and customers who didn't churn.
 
