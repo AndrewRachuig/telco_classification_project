@@ -33,7 +33,7 @@
 - Deliver a report that a non-data scientist can read through and understand what steps were taken, why and the resulting outcome
 
 ### Audience
-- My target audience for my notebook walkthrough is my direct manager and their manager
+- Target audience for my notebook walkthrough is my direct manager and their manager
 - Codeup Data Science instructors and students
 
 ### Project Deliverables
@@ -177,11 +177,11 @@ $H_{a}$ There is a statistically significant difference in total_charges between
 #### Plan &rarr; Acquire &rarr; Prepare &rarr; Explore &rarr; Model &rarr; Deliver
 - After introduction, briefly summarize (give an executive summary) the project and goals before delving into the final report notebook for a walkthrough
 - Do not talk through my entire process in the initial pipeline. This is only the "good stuff" to show how I arrived at the model I did
-- Detail my thought process as I was going through the though process to explain the reasons for my choices
+- Detail my thoughts as I was going through the process; explain the reasons for my choices
 
 ## Executive Summary
 - Of all the classification models I created DecisionTree and RandomForest performed the best.
-- I chose RandomForest as my best performing model and achieved a 80.9% for predicting my target value, churn. This model outperformed the baseline accuracy score of 73.4% so it has predictive value.
+- I chose RandomForest as my best performing model and achieved 80.9% accuracy when predicting the target value out-of-sample data. This model outperformed the baseline accuracy score of 73.4% so it has predictive value.
 - There were some clear drivers of churn in the dataset. The overwhelming majority of customers who churned were:
     - **Month-to-Month** contracts
     - Electronic check payment customers
