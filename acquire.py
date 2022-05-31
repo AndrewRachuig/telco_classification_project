@@ -51,3 +51,4 @@ def describe_with_range(df):
     summary_stats = df.describe().T
     summary_stats['range'] = summary_stats['max'] - summary_stats['min']
     return summary_stats
+    
